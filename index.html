@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <title>Sign Form</title>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <a href="#" class="logo">LoGo</a>
+        <ul class = "main-nav" id="js-menu">
+            <li><a href="#" class="nav-links">Home</a></li>
+            <li><a href="#" class="nav-links">Products</a></li>
+            <li><a href="#" class="nav-links">About Us</a></li>
+            <li><a href="#" class="nav-links">Contact</li>
+            <li>
+             <a href="#" class="nav-links" id="signin">Sign In</a> / 
+             <a href="#" class="nav-links" id="signup">Sign Up</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="demo-container">
+       <div class="modal-control">
+           <form action="/submit.js" class="modal-control" method="post" id="signform">
+            
+          </form>
+       </div>
+    </div>
+</header>
+
+    <script src="index.js"></script>
+    <script src="submit.js"></script>
+</body>
+</html>
