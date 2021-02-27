@@ -11,7 +11,7 @@ html{
 }
 
 header{
-    background-image: linear-gradient(to right, #07e2ff4f, #41ffdf57), url(https://www.setaswall.com/wp-content/uploads/2017/07/Blue-Wallpaper-22-1680x1050.jpg);
+    background-image: linear-gradient(to right, #07e2ff4f, #41ffdf57), url(Blue-Wallpaper-22-1680x1050.jpg);
     background-size: cover;
     background-repeat:no-repeat;
     width: 100%;
@@ -68,6 +68,7 @@ display: none;
     text-align: center;
     margin-left: 2em;
     font-size: 1rem;
+    font-weight: 600;
 }
 
 .logo{
@@ -92,16 +93,12 @@ header::after{
 
 }
 
+.nav-links:active,
 .nav-links:hover{
     text-decoration: none;
-    color: rgba(1, 1, 29, 0.753);
-}
-
-.nav-links:active{
-    text-decoration: none;
-    border-bottom: strong 1em rgba(1, 1, 29, 0.753);
-    padding-bottom: 1em;
-    color: rgba(1, 1, 29, 0.753);
+    padding-bottom: .5rem;
+    color:rgba(1, 1, 29, 0.74);
+    border-bottom: solid 1px rgba(1, 1, 29, 0.74);
 }
 
 /* Container for Modal Header + Modal Control */
@@ -124,13 +121,13 @@ header::after{
     position: fixed;
     top: 50%;
     left: 50%;
-  /* bring your own prefixes */
     transform: translate(-50%, -50%);
     z-index: 200;
-    width: calc(50% - (3.5rem*2));
+    width: calc(50% - (2rem*2));
+    height: auto;
     background: rgba(0, 0, 0, 0.548);
     box-shadow: 1px 1px 6px rgba(1, 1, 19, 0.7);
-    padding: 1rem;
+    padding: .5rem 1rem;
     border-radius: 1em;
     cursor: pointer;
 }
@@ -139,18 +136,18 @@ header::after{
     color:rgba(195, 191, 240, 0.753);
     margin: .7rem 0;
     font-size: 1rem;
+    padding-bottom: .2em;
     text-decoration: none;
     justify-content:center;
+    display: inline-block;
 }
-
 .modal-header:hover,
 .modal-header:active{
-    color:rgba(0, 0, 3, 0.788);
+    color:rgba(1, 1, 29, 0.74);
+    padding-bottom: .1em;
+    border-bottom: solid 1px rgba(1, 1, 29, 0.74);
 }
 
-.modalHeader::after{
-    border-bottom:strong 1px rgba(0, 0, 7, 0.788);
-}
 
 /* Full-width inputs */
 input[type='text'], input[type='password'] {
@@ -164,25 +161,25 @@ input[type='text'], input[type='password'] {
     font-size: .9rem;
   }
 
-.modal-input{
+.modal-input {
     box-sizing: border-box;
     resize: none;
     flex-direction: colume;
-    color: rgba(223, 223, 245, 0.911);
+    color: rgba(250, 250, 250, 0.8);
     margin-top: .6rem;
     font-size: .9rem;
 }
 
-.modal-input:focus{
+.modal-input input:focus{
     outline: none;
-    background:rgba(205, 205, 245, 0.692);
-    border-color: rgba(6, 6, 44, 0.637);
+    background:rgba(249, 249, 252, 0.904);
+    border-color: rgba(1, 1, 43, 0.6);
     resize: none;
 }
 
 .modal-actions{
     text-align: right;
-    color:rgba(195, 191, 240, 0.753);
+    color:rgba(227, 226, 248, 0.7);
     
 }
 
@@ -192,7 +189,7 @@ input[type='text'], input[type='password'] {
     height: 100%;
     top: 0;
     left: 0;
-    background:rgba(11, 7, 34, 0.178);
+    background:rgba(11, 7, 34, 0.19);
     z-index: 100;
 }
 
@@ -210,28 +207,94 @@ input[type='text'], input[type='password'] {
 /* Set a style for all buttons */
 input[type='submit'] {
     display: block;
-    background: rgba(245, 245, 248, 0.384);
+    background: rgba(148, 148, 150, 0.3);
     font-size: 1rem;
-    color: rgba(26, 29, 71, 0.911);
+    font-weight: 600;
+    color: rgba(1, 4, 44, 0.7);
     padding: .7em .7em;
-    border: solid 2px rgba(2, 2, 36, 0.479);
-    border-radius: .5em;
+    border: solid 2px rgba(0, 0, 24, 0.5);
+    border-radius: .6em;
     cursor: pointer;
     width: 50%;
     margin:1rem auto;
+    animation: blink 2s infinite;
   }
+
+  @keyframes blink {
+    0% {
+        background-color: rgba(169, 169, 173, 0.10);
+    }
+    25% {
+        background-color: rgba(169, 169, 173, 0.15);
+    }
+    50% {
+        background-color: rgba(169, 169, 173, 0.20);
+    }
+    75% {
+        background-color: rgba(169, 169, 173, 0.25);
+    }
+    100% {
+        background-color: rgba(169, 169, 173, 0.30);
+    }
+}
   
   /* Add a hover effect for buttons */
   input[type='submit']:hover {
     background: rgba(15, 15, 24, 0.753);
-    border: solid 2px rgba(0, 0, 20, 0.616);
+    border: solid 2px rgba(162, 163, 175, 0.911);
     color: rgba(162, 163, 175, 0.911);
   }
 
-  form input.error {
-    border-color: #e74c3c
+  input[type='text'], 
+  input[type='password'].error {
+    border-color: #5f150ebe;
 }
 
-form input.success {
-    border-color: #84f1d6
+input[type='text'], 
+input[type='password'].success {
+    border-color: #4b9c52b0;
 }
+form small{
+    display: block;
+    font-weight: 500;
+    color:rgba(247, 2, 2, 0.966);
+    margin-bottom: .5rem;
+}
+
+/*The Modal for clients list*/
+.clientsModal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+    width: 90%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 1px 1px 6px rgba(1, 1, 19, 0.7);
+    padding: .5rem 1rem;
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+.clientList {
+    color:rgba(195, 191, 240, 0.753);
+    padding: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-weight: 600;
+  }
+  
+  td, th {
+    border: 1px solid #dddddda1;
+    text-align: left;
+    padding: .9rem;
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgba(195, 191, 240, 0.418);
+    color:rgba(4, 1, 43, 0.808)
+  }
