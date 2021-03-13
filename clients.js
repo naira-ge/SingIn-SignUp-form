@@ -5,6 +5,7 @@ const clients = document.querySelector('#clients');
 let clientmodal;
 let testing; 
 let hello;
+let test;
 let clientTab = document.createElement('div');
 clientTab.classList.add('clientList');
 
